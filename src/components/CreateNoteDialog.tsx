@@ -62,10 +62,8 @@ const CreateNoteDialog = (props: Props) => {
                 <div className="h-4"></div>
                 <div className="flex items-center gap-2">
                     <Button type='reset' variant={"secondary"}>Cancel</Button>
-                    <Button type='submit' className='bg-green-600' disabled={createNotebook.status==='pending'}>
-                    {createNotebook.status==='pending' && (
-                        <Loader2 className='w-4 h-4 mr-2 animate-spin'/>
-                    )}Create</Button>
+                    <Button type='submit' className='bg-green-600' disabled={createNotebook.isPending}>
+                    {createNotebook.isPending && <Loader2 className='w-4 h-4 mr-2 animate-spin'/>}Create</Button>
                 </div>
             </form>
         </DialogContent>
